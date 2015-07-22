@@ -1,1 +1,7 @@
-%h1 Index file
+- @twitters.each do |twitter|
+  .twitter.row.clearfix
+    %h1= link_to twitter.title, twitter
+    %p
+      Submitted
+      = time_ago_in_words(twitter.created_at)
+      ago

@@ -1,0 +1,69 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$red: #DB6161;
+
+@mixin box-shadow {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+}
+
+.navbar {
+  .navbar-brand {
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-size: 25px;
+    a {
+      color: $red;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  @include box-shadow;
+  background: white;
+  font-weight: bold;
+}
+
+.twitter {
+	padding: 2em 1em;
+	border-bottom: 1px solid #e9e9e9;
+	.title {
+		a {
+			color: #FF4500;
+		}
+	}
+}
+
+.twitter_content {
+  h1 {
+    font-size: 3em;
+  }
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 10px;
+}

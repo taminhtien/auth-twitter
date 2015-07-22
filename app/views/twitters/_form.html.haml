@@ -1,0 +1,16 @@
+= simple_form_for @twitter do |f|
+  - if @twitter.errors.any?
+    #errors
+      %p
+        = @twitter.errors.count
+        prevent this twitter from saving
+      %ul
+        - @twitter.errors.full_messages.each do |msg|
+          %li= msg
+
+  = f.input :title, input_html: { class: "form-control" }
+  %br
+  = f.input :body, input_html: { class: "form-control" }
+  %br
+  = link_to "Back", root_path, class: "btn btn-default"
+  = f.button :submit, class: "btn btn-primary"
