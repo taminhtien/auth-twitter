@@ -9,11 +9,15 @@
 %body
   %nav.navbar.navbar-default
     .container
-      .navbar-brand= link_to "Twitter", root_path
+      .navbar-brand= link_to "Tweet", root_path
 
       %ul.nav.navbar-nav.navbar-right
-        %li= link_to "New twitter", new_twitter_path
-        %li= link_to "Sign in", "#"
+        %li= link_to "New tweet", new_tweet_path
+        - if current_user
+          %li= link_to "#{current_user.name}", "#"
+        - else
+          %li= link_to "Sign in with Twitter", "#"
+
   .container
     - flash.each do |name, msg|
       = content_tag :div, msg, class: "alert alert-#{name}"

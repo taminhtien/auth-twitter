@@ -1,6 +1,6 @@
-class CreateTwitters < ActiveRecord::Migration
+class CreateTweets < ActiveRecord::Migration
   def change
-    create_table :twitters do |t|
+    create_table :tweets do |t|
       t.string :title
       t.text :body
 

@@ -1,0 +1,7 @@
+- @tweets.each do |tweet|
+  .tweet.row.clearfix
+    %h1= link_to tweet.title, tweet
+    %p
+      Submitted
+      = time_ago_in_words(tweet.created_at)
+      ago

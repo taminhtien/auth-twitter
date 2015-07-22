@@ -1,0 +1,6 @@
+.tweet_content
+  %h1.title= @tweet.title
+  %p.body= @tweet.body
+  .btn-group
+    =link_to "Edit", edit_tweet_path, class: "btn btn-default"
+    =link_to "Delete", tweet_path, method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-default"

@@ -1,11 +1,11 @@
-= simple_form_for @twitter do |f|
-  - if @twitter.errors.any?
+= simple_form_for @tweet do |f|
+  - if @tweet.errors.any?
     #errors
       %p
-        = @twitter.errors.count
-        prevent this twitter from saving
+        = @tweet.errors.count
+        prevent this tweet from saving
       %ul
-        - @twitter.errors.full_messages.each do |msg|
+        - @tweet.errors.full_messages.each do |msg|
           %li= msg
 
   = f.input :title, input_html: { class: "form-control" }
